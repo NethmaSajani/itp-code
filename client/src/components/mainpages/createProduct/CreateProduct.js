@@ -9,7 +9,7 @@ const initialState = {
     title: '',
     price: 0,
     description: '',
-    content: '',
+    // content: '',
     category: '',
     _id: ''
 }
@@ -112,7 +112,7 @@ function CreateProduct() {
                 })
             }
             setCallback(!callback)
-            history.push("/")
+            history.push("/food")
         } catch (err) {
             alert(err.response.data.msg)
         }
@@ -161,11 +161,11 @@ function CreateProduct() {
                     value={product.description} rows="5" onChange={handleChangeInput} />
                 </div>
 
-                <div className="row">
+                {/* <div className="row">
                     <label htmlFor="content">Content</label>
                     <textarea type="text" name="content" id="content" placeholder="please enter product content" required
                     value={product.content} rows="7" onChange={handleChangeInput} />
-                </div>
+                </div> */}
 
                 <div className="row">
                     <label htmlFor="categories">Categories: </label>

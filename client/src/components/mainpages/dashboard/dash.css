@@ -1,0 +1,7 @@
+#dashboard_container{
+    height: calc(100vh - 70px);
+    background: oranage;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

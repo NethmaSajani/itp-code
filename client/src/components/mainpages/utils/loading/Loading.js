@@ -1,26 +1,13 @@
 import React from 'react'
 import './loading.css'
+import Loader from '../../../../images/loader.gif'
 
 function Loading() {
     return (
         <div className="load-page">
-            <div className="loader">
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <div>
-                                        <div>
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
+            <img src={Loader} alt="" id="loader" />
+
         </div>
     )
 }

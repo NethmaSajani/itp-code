@@ -7,6 +7,7 @@ import Register from './auth/Register'
 import NotFound from './utils/not_found/NotFound'
 import Categories from './categories/Categories'
 import CreateProduct from './createProduct/CreateProduct'
+import Home from '../mainpages//home/Index'
 
 import {GlobalState} from '../../GlobalState'
 
@@ -19,15 +20,16 @@ function Pages() {
 
     return (
         <Switch>
-            <Route path="/" exact component={Products} />
-            <Route path="/detail/:id" exact component={DetailProduct} />
+            <Route path="/food"  component={Products} />
+            <Route path="/" exact component={Home} />
+            <Route path="/detail/:id"  component={DetailProduct} />
 
             <Route path="/login" exact component={isLogged ? NotFound : Login} />
             <Route path="/register" exact component={isLogged ? NotFound : Register} />
 
-            <Route path="/category" exact component={isAdmin ? Categories : NotFound} />
-            <Route path="/create_product" exact component={isAdmin ? CreateProduct : NotFound} />
-            <Route path="/edit_product/:id" exact component={isAdmin ? CreateProduct : NotFound} />
+            <Route path="/category"  component={isAdmin ? Categories : NotFound} />
+            <Route path="/create_product"  component={isAdmin ? CreateProduct : NotFound} />
+            <Route path="/edit_product/:id"  component={isAdmin ? CreateProduct : NotFound} />
 
 
 
